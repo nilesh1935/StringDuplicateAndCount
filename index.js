@@ -11,7 +11,7 @@ import './style.css';
 //
 // Write Javascript code!
 
-let strName = "AaBB"
+let strName = "AAasdsTERUIfg%#$,gfhADcvbm89ADSasopkJFDP78kfdm^$*(gkfld()()()()"
 
 function getFrequency(string) {
   var freq = {};
