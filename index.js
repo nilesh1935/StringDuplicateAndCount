@@ -16,7 +16,7 @@ let strName = "AAasdsTERUIfg%#$,gfhADcvbm89ADSasopkJFDP78kfdm^$*(gkfld()()()()"
 function getFrequency(string) {
   var freq = {};
   for (var i=0; i<string.length;i++) {
-      var character = string.charAt(i);
+      var character = string[i];
       if (freq[character]) {
          freq[character]++;
       } else {
