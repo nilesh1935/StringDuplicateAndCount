@@ -17,10 +17,13 @@ function getFrequency(string) {
   var freq = {};
   for (var i=0; i<string.length;i++) {
       var character = string[i];
+      console.log(freq[character])
       if (freq[character]) {
          freq[character]++;
+         console.log("Called from IF",freq[character])
       } else {
          freq[character] = 1;
+         console.log("Called from Else",freq[character])
         
       }
   }
