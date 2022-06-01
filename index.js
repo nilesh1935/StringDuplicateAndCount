@@ -11,8 +11,19 @@ import './style.css';
 //
 // Write Javascript code!
 
-let strName = "AAasdsTERUIfg%#$,gfhADcvbm89ADSasopkJFDP78kfdm^$*(gkfld()()()()"
-
+let strName = "ABABB"
+// var strArry = ["a","b","c","a","b"]
+// var newArray = [];
+// var count = 0;
+// for(var i=0; i<strArry.length;i++){
+//    for(var j=i+1; j<strArry.length; j++){
+//       if(strArry[i] === strArry[j]){
+//          count++;
+//          newArray.push(strArry[i + count])
+//       }
+//    }
+// }
+// console.log(newArray)
 function getFrequency(string) {
   var freq = {};
   for (var i=0; i<string.length;i++) {
@@ -20,10 +31,10 @@ function getFrequency(string) {
       console.log(freq[character])
       if (freq[character]) {
          freq[character]++;
-         console.log("Called from IF",freq[character])
+         console.log("Called from IF",freq[character],character)
       } else {
          freq[character] = 1;
-         console.log("Called from Else",freq[character])
+         console.log("Called from Else",freq[character], character)
         
       }
   }
@@ -31,7 +42,28 @@ function getFrequency(string) {
   return freq;
   };
 
-let finalAnswer = getFrequency(strName)
-console.log(finalAnswer)
+  function getDuplicateFrequency(string) {
+   var freq = {};
+   var duplicate = {};
+   for (var i=0; i<string.length;i++) {
+       var character = string[i];
+       if (freq[character]) {
+         freq[character]++;
+          duplicate[character] = freq[character];
+          
+       } else {
+          freq[character] = 1;
+          
+         
+       }
+   }
+   
+   return duplicate;
+   };
+ let finalAnswer = getFrequency(strName)
+ console.log(finalAnswer)
+
+ let finalDuplicateAnswer = getDuplicateFrequency(strName)
+ console.log(finalDuplicateAnswer)
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
